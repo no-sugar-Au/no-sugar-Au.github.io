@@ -123,18 +123,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -168,6 +168,110 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/02/Node.js%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LJX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Au-Au-Au">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Au-Au-Au">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/02/Node.js%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Node.js学习</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-07-02 13:00:47" itemprop="dateCreated datePublished" datetime="2022-07-02T13:00:47+08:00">2022-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-07-04 18:34:52" itemprop="dateModified" datetime="2022-07-04T18:34:52+08:00">2022-07-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Node-js/" itemprop="url" rel="index"><span itemprop="name">Node.js</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="fs文件系统模块"><a href="#fs文件系统模块" class="headerlink" title="fs文件系统模块"></a>fs文件系统模块</h3><h4 id="fs读取文件内容"><a href="#fs读取文件内容" class="headerlink" title="fs读取文件内容"></a>fs读取文件内容</h4><p>如果要在JavaScript代码中使用fs模块来操作文件，则需要使用如下的方式先导入它：<br><code>const fs = require(&#39;fs&#39;)</code><br>使用 <code>fs.readFile()</code> 方法读取指定文件中的内容，语法格式为：<br><code>fs.readFile(path[,options],callback)</code></p>
+<ul>
+<li>参数1：必选参数，字符串，表示文件的路径</li>
+<li>参数2：可选参数，表示以什么编码格式来读取文件（默认指定utf8）</li>
+<li>参数3：必选参数，文件读取完成后，通过回调函数拿到读取的结果</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入fs模块</span></span><br><span class="line"><span class="keyword">const</span> fs=<span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="comment">// 2.调用fs.readFile()方法读取文件</span></span><br><span class="line">fs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>,<span class="keyword">function</span>(<span class="params">err,dataStr</span>)&#123;</span><br><span class="line">    <span class="comment">// 打印失败的结果,如果读取成功，err的值为null</span></span><br><span class="line">    <span class="comment">//如果读取失败，err的值为错误对象，dataStr的值为undefined</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);   </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;--------&#x27;</span>)</span><br><span class="line">    <span class="comment">//打印成功的结果</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(dataStr)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>读取成功后结果如下， <code>dataStr</code> 返回的是文件内容</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20220702191701877.png" alt="image-20220702191701877"><br>判断文件是否读取成功</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs=<span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line">fs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>,<span class="keyword">function</span>(<span class="params">err,dataStr</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(err)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;读取文件失败&#x27;</span>+err.<span class="property">message</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;读取文件成功&#x27;</span>+dataStr);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="向指定的文件中写入内容"><a href="#向指定的文件中写入内容" class="headerlink" title="向指定的文件中写入内容"></a>向指定的文件中写入内容</h4><p>使用 <code>fs.writeFile(file,data[,options],callback)</code> 方法向指定的文件中写入内容</p>
+<ul>
+<li>参数1：必选参数，需要指定一个文件路径的字符串，表示文件的存放路径</li>
+<li>参数2：必选参数，表示要写入什么内容</li>
+<li>参数3：可选参数，表示以什么格式写入文件内容，默认值是utf8</li>
+<li>参数4：必选参数，文件写入完成后的回调函数</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入fs文件系统模块</span></span><br><span class="line"><span class="keyword">const</span> fs=<span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.调用fs.writeFile()方法，写入文件的内容</span></span><br><span class="line">fs.<span class="title function_">writeFile</span>(<span class="string">&#x27;./files/2.txt&#x27;</span>,<span class="string">&#x27;bronya zakchik&#x27;</span>,<span class="keyword">function</span>(<span class="params">err</span>)&#123;</span><br><span class="line">    <span class="comment">//如果文件写入成功，err的值为null</span></span><br><span class="line">    <span class="comment">//如果文件写入失败，err的值等于一个错误对象</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>读取或写入文件时写相对路径会出现找不到文件的情况，在文件相对路径前面加上 <code>__dirname</code> 可以解决这个问题</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs=<span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line">fs.<span class="title function_">readFile</span>(__dirname+<span class="string">&#x27;/files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>,<span class="keyword">function</span>(<span class="params">err,dataStr</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(err)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;读取文件失败&#x27;</span>+err.<span class="property">message</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;读取文件成功&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="path路径模块"><a href="#path路径模块" class="headerlink" title="path路径模块"></a>path路径模块</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
