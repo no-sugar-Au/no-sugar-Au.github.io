@@ -22,8 +22,8 @@
 
     <meta name="description" content="Vue的基本使用基本使用步骤 导入 vue.js 的script脚本文件 在页面中声明一个将要被vue所控制的DOM区域 创建vm实例对象（vue实例对象）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue学习">
-<meta property="og:url" content="http://example.com/2022/10/08/Vue%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="Vue2学习">
+<meta property="og:url" content="http://example.com/2022/10/08/Vue2%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Au-Au-Au">
 <meta property="og:description" content="Vue的基本使用基本使用步骤 导入 vue.js 的script脚本文件 在页面中声明一个将要被vue所控制的DOM区域 创建vm实例对象（vue实例对象）">
 <meta property="og:locale" content="en_US">
@@ -39,8 +39,39 @@
 <meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230111171327442.png">
 <meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230111171519783.png">
 <meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230111174123006.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128131827855.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128131900568.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128133020539.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128140301224.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128140404540.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128145243517.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128145259706.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128190202274.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128190347979.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128190502532.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128191031842.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230129180410967.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230129180527651.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215104722001.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215111502736.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215111654605.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215112317891.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215112736409.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215113410183.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215115816240.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215120045429.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215120105886.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215155643048.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215155722383.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215160910285.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215160959831.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215173010865.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230222154007313.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230222154646625.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230222173236704.png">
+<meta property="og:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230222174227749.png">
 <meta property="article:published_time" content="2022-10-08T06:56:39.514Z">
-<meta property="article:modified_time" content="2023-01-28T02:36:55.348Z">
+<meta property="article:modified_time" content="2023-02-23T02:29:19.346Z">
 <meta property="article:author" content="LJX">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="Vue">
@@ -48,14 +79,14 @@
 <meta name="twitter:image" content="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20221119165937135.png">
 
 
-<link rel="canonical" href="http://example.com/2022/10/08/Vue%E5%AD%A6%E4%B9%A0/">
+<link rel="canonical" href="http://example.com/2022/10/08/Vue2%E5%AD%A6%E4%B9%A0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/10/08/Vue%E5%AD%A6%E4%B9%A0/","path":"2022/10/08/Vue学习/","title":"Vue学习"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/10/08/Vue2%E5%AD%A6%E4%B9%A0/","path":"2022/10/08/Vue2学习/","title":"Vue2学习"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Vue学习 | Au-Au-Au</title>
+<title>Vue2学习 | Au-Au-Au</title>
   
 
 
@@ -130,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">Vue的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.</span> <span class="nav-text">基本使用步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue%E7%9A%84%E6%8C%87%E4%BB%A4%E4%B8%8E%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">vue的指令与过滤器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E6%B8%B2%E6%9F%93%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.1.</span> <span class="nav-text">内容渲染指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%BB%91%E5%AE%9A%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.2.</span> <span class="nav-text">属性绑定指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.3.</span> <span class="nav-text">事件绑定指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">1.2.4.</span> <span class="nav-text">事件修饰符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">1.2.5.</span> <span class="nav-text">按键修饰符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.6.</span> <span class="nav-text">双向绑定指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.7.</span> <span class="nav-text">条件渲染指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E6%B8%B2%E6%9F%93%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.8.</span> <span class="nav-text">循环渲染指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">1.2.9.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A7%81%E6%9C%89%E8%BF%87%E6%BB%A4%E5%99%A8%E5%92%8C%E5%85%A8%E5%B1%80%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">1.2.10.</span> <span class="nav-text">私有过滤器和全局过滤器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#watch%E4%BE%A6%E5%90%AC%E5%99%A8"><span class="nav-number">1.2.11.</span> <span class="nav-text">watch侦听器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.12.</span> <span class="nav-text">计算属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios"><span class="nav-number">1.3.</span> <span class="nav-text">axios</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#axios%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">axios的基本使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#axios%E7%9B%B4%E6%8E%A5%E5%8F%91%E8%B5%B7GET%E5%92%8CPOST%E8%AF%B7%E6%B1%82"><span class="nav-number">1.3.2.</span> <span class="nav-text">axios直接发起GET和POST请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-cli"><span class="nav-number">2.</span> <span class="nav-text">vue-cli</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue%E7%BB%84%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">vue组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%BB%84%E4%BB%B6%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.1.</span> <span class="nav-text">使用组件的步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">注册全局组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84props"><span class="nav-number">3.3.</span> <span class="nav-text">组件的props</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#scoped%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">3.4.</span> <span class="nav-text">scoped的使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">4.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB"><span class="nav-number">5.</span> <span class="nav-text">组件之间的数据共享</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%88%B6%E7%BB%84%E4%BB%B6%E5%90%91%E5%AD%90%E7%BB%84%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="nav-number">5.1.</span> <span class="nav-text">父组件向子组件共享数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%90%E7%BB%84%E4%BB%B6%E5%90%91%E7%88%B6%E7%BB%84%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="nav-number">5.2.</span> <span class="nav-text">子组件向父组件共享数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%84%E5%BC%9F%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB"><span class="nav-number">5.3.</span> <span class="nav-text">兄弟组件之间的数据共享</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ref%E5%BC%95%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">ref引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8ref%E5%BC%95%E7%94%A8DOM%E5%85%83%E7%B4%A0"><span class="nav-number">6.1.</span> <span class="nav-text">使用ref引用DOM元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8ref%E5%BC%95%E7%94%A8%E7%BB%84%E4%BB%B6"><span class="nav-number">6.2.</span> <span class="nav-text">使用ref引用组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this-nextTick-cb-%E6%96%B9%E6%B3%95"><span class="nav-number">6.3.</span> <span class="nav-text">this.$nextTick(cb)方法</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">Vue的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.</span> <span class="nav-text">基本使用步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue%E7%9A%84%E6%8C%87%E4%BB%A4%E4%B8%8E%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">vue的指令与过滤器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E6%B8%B2%E6%9F%93%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.1.</span> <span class="nav-text">内容渲染指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%BB%91%E5%AE%9A%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.2.</span> <span class="nav-text">属性绑定指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.3.</span> <span class="nav-text">事件绑定指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">1.2.4.</span> <span class="nav-text">事件修饰符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">1.2.5.</span> <span class="nav-text">按键修饰符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.6.</span> <span class="nav-text">双向绑定指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.7.</span> <span class="nav-text">条件渲染指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E6%B8%B2%E6%9F%93%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.8.</span> <span class="nav-text">循环渲染指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">1.2.9.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A7%81%E6%9C%89%E8%BF%87%E6%BB%A4%E5%99%A8%E5%92%8C%E5%85%A8%E5%B1%80%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">1.2.10.</span> <span class="nav-text">私有过滤器和全局过滤器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#watch%E4%BE%A6%E5%90%AC%E5%99%A8"><span class="nav-number">1.2.11.</span> <span class="nav-text">watch侦听器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.12.</span> <span class="nav-text">计算属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios"><span class="nav-number">1.3.</span> <span class="nav-text">axios</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#axios%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">axios的基本使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#axios%E7%9B%B4%E6%8E%A5%E5%8F%91%E8%B5%B7GET%E5%92%8CPOST%E8%AF%B7%E6%B1%82"><span class="nav-number">1.3.2.</span> <span class="nav-text">axios直接发起GET和POST请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-cli"><span class="nav-number">2.</span> <span class="nav-text">vue-cli</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue%E7%BB%84%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">vue组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%BB%84%E4%BB%B6%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.1.</span> <span class="nav-text">使用组件的步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">注册全局组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84props"><span class="nav-number">3.3.</span> <span class="nav-text">组件的props</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#scoped%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">3.4.</span> <span class="nav-text">scoped的使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">4.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB"><span class="nav-number">5.</span> <span class="nav-text">组件之间的数据共享</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%88%B6%E7%BB%84%E4%BB%B6%E5%90%91%E5%AD%90%E7%BB%84%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="nav-number">5.1.</span> <span class="nav-text">父组件向子组件共享数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%90%E7%BB%84%E4%BB%B6%E5%90%91%E7%88%B6%E7%BB%84%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="nav-number">5.2.</span> <span class="nav-text">子组件向父组件共享数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%84%E5%BC%9F%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB"><span class="nav-number">5.3.</span> <span class="nav-text">兄弟组件之间的数据共享</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ref%E5%BC%95%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">ref引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8ref%E5%BC%95%E7%94%A8DOM%E5%85%83%E7%B4%A0"><span class="nav-number">6.1.</span> <span class="nav-text">使用ref引用DOM元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8ref%E5%BC%95%E7%94%A8%E7%BB%84%E4%BB%B6"><span class="nav-number">6.2.</span> <span class="nav-text">使用ref引用组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this-nextTick-cb-%E6%96%B9%E6%B3%95"><span class="nav-number">6.3.</span> <span class="nav-text">this.$nextTick(cb)方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6"><span class="nav-number">7.</span> <span class="nav-text">动态组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E6%A7%BD"><span class="nav-number">8.</span> <span class="nav-text">插槽</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD"><span class="nav-number">8.1.</span> <span class="nav-text">作用域插槽</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="nav-number">8.2.</span> <span class="nav-text">自定义指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A7%81%E6%9C%89%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="nav-number">8.3.</span> <span class="nav-text">私有自定义指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="nav-number">8.4.</span> <span class="nav-text">全局自定义指令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue%E4%B8%AD%E4%BD%BF%E7%94%A8axios"><span class="nav-number">9.</span> <span class="nav-text">Vue中使用axios</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%8Aaxios%E6%8C%82%E8%BD%BD%E5%88%B0Vue%E7%9A%84%E5%8E%9F%E5%9E%8B%E4%B8%8A%E5%B9%B6%E9%85%8D%E7%BD%AE%E8%AF%B7%E6%B1%82%E6%A0%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">9.1.</span> <span class="nav-text">把axios挂载到Vue的原型上并配置请求根路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1"><span class="nav-number">10.</span> <span class="nav-text">路由</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="nav-number">10.1.</span> <span class="nav-text">前端路由的工作方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-router"><span class="nav-number">10.2.</span> <span class="nav-text">vue-router</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#router-link"><span class="nav-number">10.3.</span> <span class="nav-text">router-link</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">10.4.</span> <span class="nav-text">路由重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1"><span class="nav-number">10.5.</span> <span class="nav-text">嵌套路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%8C%B9%E9%85%8D"><span class="nav-number">10.6.</span> <span class="nav-text">动态路由匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%AF%BC%E8%88%AA-amp-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="nav-number">10.7.</span> <span class="nav-text">声明式导航&amp;编程式导航</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB"><span class="nav-number">10.8.</span> <span class="nav-text">导航守卫</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%89%8D%E7%BD%AE%E5%AE%88%E5%8D%AB"><span class="nav-number">10.8.1.</span> <span class="nav-text">全局前置守卫</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="nav-number">11.</span> <span class="nav-text">ES6模块化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95"><span class="nav-number">12.</span> <span class="nav-text">异步编程高级用法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise"><span class="nav-number">12.1.</span> <span class="nav-text">Promise</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8Ethen-fs%E5%BC%82%E6%AD%A5%E7%9A%84%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">12.1.1.</span> <span class="nav-text">基于then-fs异步的读取文件内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-catch%E6%8D%95%E8%8E%B7%E9%94%99%E8%AF%AF"><span class="nav-number">12.1.2.</span> <span class="nav-text">通过.catch捕获错误</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Promise-all-%E6%96%B9%E6%B3%95"><span class="nav-number">12.1.3.</span> <span class="nav-text">Promise.all()方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Promise-race-%E6%96%B9%E6%B3%95"><span class="nav-number">12.1.4.</span> <span class="nav-text">Promise.race()方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8EPromise%E5%B0%81%E8%A3%85%E8%AF%BB%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">12.1.5.</span> <span class="nav-text">基于Promise封装读文件的方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#async-x2F-await"><span class="nav-number">12.2.</span> <span class="nav-text">async&#x2F;await</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">12.2.1.</span> <span class="nav-text">基本使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">12.2.2.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EventLoop"><span class="nav-number">12.3.</span> <span class="nav-text">EventLoop</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">12.3.1.</span> <span class="nav-text">同步任务和异步任务执行过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1"><span class="nav-number">12.3.2.</span> <span class="nav-text">宏任务和微任务</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -143,7 +174,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -154,7 +185,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -198,7 +229,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/08/Vue%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/08/Vue2%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -211,12 +242,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Vue学习 | Au-Au-Au">
+      <meta itemprop="name" content="Vue2学习 | Au-Au-Au">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Vue学习
+          Vue2学习
         </h1>
 
         <div class="post-meta-container">
@@ -234,7 +265,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-28 10:36:55" itemprop="dateModified" datetime="2023-01-28T10:36:55+08:00">2023-01-28</time>
+      <time title="Modified: 2023-02-23 10:29:19" itemprop="dateModified" datetime="2023-02-23T10:29:19+08:00">2023-02-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -396,6 +427,221 @@
 <p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230111171519783.png" alt="image-20230111171519783"></p>
 <h4 id="this-nextTick-cb-方法"><a href="#this-nextTick-cb-方法" class="headerlink" title="this.$nextTick(cb)方法"></a>this.$nextTick(cb)方法</h4><p>组件的 <code>$nextTick(cb)</code> 方法，会把cb回调推迟到下一个DOM更新周期之后执行。等组件的DOM更新完成之后，再执行cb回调函数，从而能保证cb回调函数可以操作到最新的DOM元素</p>
 <p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230111174123006.png" alt="image-20230111174123006"></p>
+<h3 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h3><p>可以动态切换组件的显示与隐藏</p>
+<ul>
+<li><code>component</code> 标签是vue内置的</li>
+<li>is属性的值表示要渲染的组件的名字</li>
+<li><code>keep-alive</code> 可以把内部的组件进行缓存，而不是销毁组件</li>
+</ul>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128131827855.png" alt="image-20230128131827855"></p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128131900568.png" alt="image-20230128131900568"></p>
+<p>keep-alive对应的生命周期函数：</p>
+<ul>
+<li>当组件被缓存时会自动触发组件的 <code>deactivated</code> 生命周期函数</li>
+<li>当组件被激活时会自动触发组件的 <code>activated</code> 生命周期函数</li>
+</ul>
+<p>keep-alive的include和exclude属性<br>include属性用来指定：只有名称匹配的组件会被缓存，exclude指定组件不被缓存，include和exclude只用一个</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128133020539.png" alt="image-20230128133020539"></p>
+<h3 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h3><p>想要把指定内容填充到指定名称的插槽中，需要使用 <code>v-slot:</code>（简写为 <code>#</code> ）后面跟上插槽的名称，且v-slot不能直接用在元素上，需要用在template标签上，具体用法如下<br>在 <code>App.vue</code> 中如下</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128140301224.png" alt="image-20230128140301224"></p>
+<p>在 <code>Left.vue</code> 中如下</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128140404540.png" alt="image-20230128140404540"></p>
+<h4 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h4><p>在封装组件时，为预留的 <code>&lt;slot&gt;</code> 提供属性对应的值，简单用法如下</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128145243517.png" alt="image-20230128145243517"></p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128145259706.png" alt="image-20230128145259706"></p>
+<h4 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h4><h4 id="私有自定义指令"><a href="#私有自定义指令" class="headerlink" title="私有自定义指令"></a>私有自定义指令</h4><p>bind函数和update函数的区别：bind函数在第一次绑定时执行，update函数会在之后每次DOM更新时被调用</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128190202274.png" alt="image-20230128190202274"></p>
+<p>bind函数和update函数内容一样时，简写为如下</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128190347979.png" alt="image-20230128190347979"></p>
+<p>在template中使用 <code>v-color</code> 指令如下</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128190502532.png" alt="image-20230128190502532"></p>
+<h4 id="全局自定义指令"><a href="#全局自定义指令" class="headerlink" title="全局自定义指令"></a>全局自定义指令</h4><p>在 <code>main.js</code> 中定义</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230128191031842.png" alt="image-20230128191031842"></p>
+<h3 id="Vue中使用axios"><a href="#Vue中使用axios" class="headerlink" title="Vue中使用axios"></a>Vue中使用axios</h3><h4 id="把axios挂载到Vue的原型上并配置请求根路径"><a href="#把axios挂载到Vue的原型上并配置请求根路径" class="headerlink" title="把axios挂载到Vue的原型上并配置请求根路径"></a>把axios挂载到Vue的原型上并配置请求根路径</h4><ul>
+<li>先在 <code>main.js</code> 中进行全局配置</li>
+</ul>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230129180410967.png" alt="image-20230129180410967"></p>
+<ul>
+<li>在组件中使用时如下，无需在组件中再导入axios</li>
+</ul>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230129180527651.png" alt="image-20230129180527651"></p>
+<h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><h4 id="前端路由的工作方式"><a href="#前端路由的工作方式" class="headerlink" title="前端路由的工作方式"></a>前端路由的工作方式</h4><ul>
+<li>用户点击页面上的路由链接，导致URL地址栏中的Hash值发生了变化</li>
+<li>前端路由监听到了Hash地址的变化</li>
+<li>前端路由把当前Hash地址对应的组件渲染到浏览器中</li>
+</ul>
+<h4 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h4><p>安装配置步骤：</p>
+<ul>
+<li><p>安装vue-router：<code>npm i vue-router@3.5.2 -s</code></p>
+</li>
+<li><p>创建路由模块：在src源代码目录下新建router&#x2F;index.js路由模块，并初始化如下代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入Vue和VueRouter的包</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">VueRouter</span> <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.调用Vue.use()函数，把VueRouter安装为Vue的插件</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">VueRouter</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.创建路由的实例对象</span></span><br><span class="line"><span class="keyword">const</span> router=<span class="keyword">new</span> <span class="title class_">VueRouter</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">//4.向外共享路由的实例对象</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure></li>
+<li><p>导入并挂载路由模块(在main.js中)</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215104722001.png" alt="image-20230215104722001"></p>
+</li>
+<li><p>声明路由链接和占位符</p>
+<p>在组件中声明占位符：</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215111502736.png" alt="image-20230215111502736"></p>
+<p>在index.js中声明路由链接并导入需要的组件</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215111654605.png" alt="image-20230215111654605"></p>
+</li>
+</ul>
+<h4 id="router-link"><a href="#router-link" class="headerlink" title="router-link"></a>router-link</h4><p>当安装和配置了vue-router之后，可以使用router-link来替代普通的a链接</p>
+<ul>
+<li>使用a链接时：</li>
+</ul>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215112317891.png" alt="image-20230215112317891"></p>
+<ul>
+<li>替换为router-link：</li>
+</ul>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215112736409.png" alt="image-20230215112736409"></p>
+<h4 id="路由重定向"><a href="#路由重定向" class="headerlink" title="路由重定向"></a>路由重定向</h4><p>用户在访问地址A的时候，强制用户跳转到地址C，从而展示特定的组件页面。<br>通过路由规则的redirect属性，指定一个新的路由地址，可以设置路由的重定向：</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215113410183.png" alt="image-20230215113410183"></p>
+<h4 id="嵌套路由"><a href="#嵌套路由" class="headerlink" title="嵌套路由"></a>嵌套路由</h4><ul>
+<li><p>在组件中声明占位符</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215115816240.png" alt="image-20230215115816240"></p>
+</li>
+<li><p>在index.js中使用children属性声明子路由规则，并导入需要的组件</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215120045429.png" alt="image-20230215120045429"></p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215120105886.png" alt="image-20230215120105886"></p>
+</li>
+</ul>
+<h4 id="动态路由匹配"><a href="#动态路由匹配" class="headerlink" title="动态路由匹配"></a>动态路由匹配</h4><p>动态路由：把Hash地址中可变的部分定义为参数项，从而提高路由规则的复用性</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215155643048.png" alt="image-20230215155643048"></p>
+<p>​                                             <img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215155722383.png" alt="image-20230215155722383"><br>在组件中， <code>this.$route.params.id</code>可以拿到id的值，其中，<code>this.$params</code> 是路由的参数对象<br>要获取到id的值，还可以通过为路由规则开启props传参的方法</p>
+<ul>
+<li>在index.js中：</li>
+</ul>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215160910285.png" alt="image-20230215160910285"></p>
+<ul>
+<li>在组件Movie中：</li>
+</ul>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215160959831.png" alt="image-20230215160959831"></p>
+<p>注意事项：</p>
+<ul>
+<li>在Hash地址中，&#x2F; 后面的参数项叫做路径参数，在路由参数对象中，需要使用 <code>this.$route.params</code> 来访问路径参数</li>
+<li>在Hash地址中，? 后面的参数项叫做查询参数，在路由参数对象中，需要使用 <code>this.$route.query</code> 来访问查询参数</li>
+<li>在 <code>this.$route</code> 中，path只是路径部分；fullPath是完整的地址，例如，<code>/movie/2?name=bronya&amp;age=18</code> 是fullPath的值，<code>/movie/2</code> 是path的值</li>
+</ul>
+<h4 id="声明式导航-amp-编程式导航"><a href="#声明式导航-amp-编程式导航" class="headerlink" title="声明式导航&amp;编程式导航"></a>声明式导航&amp;编程式导航</h4><ul>
+<li><code>this.$router.push(&#39;hash地址&#39;)</code><ul>
+<li>跳转到指定hash地址，并增加一条历史记录</li>
+</ul>
+</li>
+<li><code>this.$router.replace(&#39;hash地址&#39;)</code><ul>
+<li>跳转到指定的hash地址，并替换掉当前的历史记录</li>
+</ul>
+</li>
+<li><code>this.$router.go(数值n)</code><ul>
+<li>可以在浏览历史中前进或后退，负数后退，正数前进<ul>
+<li><code>$router.back()</code>  在历史记录中后退到上一个页面</li>
+<li><code>$router.forward()</code> 在历史记录中前进到下一个页面</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="导航守卫"><a href="#导航守卫" class="headerlink" title="导航守卫"></a>导航守卫</h4><h5 id="全局前置守卫"><a href="#全局前置守卫" class="headerlink" title="全局前置守卫"></a>全局前置守卫</h5><p>每次发生路由的导航跳转时，都会触发全局前置守卫。因此在全局前置守卫中，程序员可以对每个路由进行访问权限的控制：</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230215173010865.png" alt="image-20230215173010865"></p>
+<p>next函数的三种调用方式：</p>
+<ul>
+<li>当用户拥有后台主页的访问权限，直接放行 <code>next()</code></li>
+<li>当用户没有后台主页的访问权限，强制跳转到登录页面 <code>next(&#39;/login&#39;)</code></li>
+<li>当用户没有后台主页的访问权限，不允许跳转到后台主页 <code>next(false)</code></li>
+</ul>
+<h3 id="ES6模块化"><a href="#ES6模块化" class="headerlink" title="ES6模块化"></a>ES6模块化</h3><ul>
+<li>默认导出：<code>export default 默认导出的成员</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> n1=<span class="number">10</span></span><br><span class="line"><span class="keyword">const</span> n2=<span class="number">20</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">show</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    n1,show</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>默认导入：<code>import 接收名称 from &#39;模块标识符&#39;</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> m1 <span class="keyword">from</span> <span class="string">&#x27;./01-默认导出.js&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(m1)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>按需导出<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> s1=<span class="number">10</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> s2=<span class="number">20</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">show</span>(<span class="params"></span>)&#123;&#125;</span><br></pre></td></tr></table></figure></li>
+<li>按需导入</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;s1,s2&#125; <span class="keyword">from</span> <span class="string">&#x27;./03-按需导出.js&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s1)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s2)</span><br></pre></td></tr></table></figure>
+
+<h3 id="异步编程高级用法"><a href="#异步编程高级用法" class="headerlink" title="异步编程高级用法"></a>异步编程高级用法</h3><h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><ul>
+<li>Promise是一个构造函数<ul>
+<li>创建Promise的实例 <code>const p=new Promise()</code></li>
+<li>new出来的Promise实例对象代表一个异步操作</li>
+</ul>
+</li>
+<li>Promise.prototype上包含一个 .then()方法<ul>
+<li>每一次new Promise()构造函数得到的实例对象都可以通过原型链的方式访问到.then()方法，例如p.then()</li>
+</ul>
+</li>
+<li>.then()方法用来预先指定成功和失败的回调函数<ul>
+<li><code>p.then(result=&gt;&#123;&#125;,error=&gt;&#123;&#125;)</code></li>
+<li>调用.then()方法时，成功的回调函数必选成功的回调函数必选，失败的回调函数可选</li>
+</ul>
+</li>
+</ul>
+<h5 id="基于then-fs异步的读取文件内容"><a href="#基于then-fs异步的读取文件内容" class="headerlink" title="基于then-fs异步的读取文件内容"></a>基于then-fs异步的读取文件内容</h5><p>首先需要安装包：<code>npm i then-fs</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> thenFs <span class="keyword">from</span> <span class="string">&#x27;then-fs&#x27;</span></span><br><span class="line">thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">r1</span>)=&gt;</span>&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(r1)&#125;)</span><br><span class="line">thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/2.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">r2</span>)=&gt;</span>&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(r2)&#125;)</span><br><span class="line">thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/3.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">r3</span>)=&gt;</span>&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(r3)&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>但此方法不能保证文件的读取顺序</p>
+<p>如果想要按顺序读取文件，可以使用如下方法，此方法可以解决地狱回调问题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> thenFs <span class="keyword">from</span> <span class="string">&#x27;then-fs&#x27;</span></span><br><span class="line">thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function">(<span class="params">r1</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(r1);</span><br><span class="line">    <span class="keyword">return</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/2.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function">(<span class="params">r2</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(r2)</span><br><span class="line">    <span class="keyword">return</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/3.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function">(<span class="params">r3</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(r3)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="通过-catch捕获错误"><a href="#通过-catch捕获错误" class="headerlink" title="通过.catch捕获错误"></a>通过.catch捕获错误</h5><ul>
+<li>将.catch提前不会影响后续的执行</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> thenFs <span class="keyword">from</span> <span class="string">&#x27;then-fs&#x27;</span></span><br><span class="line">thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/11.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">.<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err.<span class="property">message</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function">(<span class="params">r1</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(r1);</span><br><span class="line">    <span class="keyword">return</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/2.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function">(<span class="params">r2</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(r2)</span><br><span class="line">    <span class="keyword">return</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/3.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function">(<span class="params">r3</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(r3)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将.catch放在最后时，前面产生错误时后续的.then无法正常执行</li>
+</ul>
+<h5 id="Promise-all-方法"><a href="#Promise-all-方法" class="headerlink" title="Promise.all()方法"></a>Promise.all()方法</h5><p>Promise.all()方法会发起并行的Promise异步操作，等所有的异步操作全部结束后才会执行下一步的.then操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> thenFs <span class="keyword">from</span> <span class="string">&#x27;then-fs&#x27;</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Arr</span>=[</span><br><span class="line">    thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>),</span><br><span class="line">    thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/2.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>),</span><br><span class="line">    thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/3.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">]</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>(<span class="title class_">Arr</span>).<span class="title function_">then</span>(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>输入结果如下：</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230222154007313.png" alt="image-20230222154007313"></p>
+<p>读取时的顺序就是最终输出的顺序</p>
+<h5 id="Promise-race-方法"><a href="#Promise-race-方法" class="headerlink" title="Promise.race()方法"></a>Promise.race()方法</h5><p>Promise.race()方法会发起并行的Promise异步操作，只要任何一个异步操作完成，就立即执行下一步的.then操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> thenFs <span class="keyword">from</span> <span class="string">&#x27;then-fs&#x27;</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Arr</span>=[</span><br><span class="line">    thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>),</span><br><span class="line">    thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/2.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>),</span><br><span class="line">    thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/3.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">]</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">race</span>(<span class="title class_">Arr</span>).<span class="title function_">then</span>(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>对比不同的输出结果：</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230222154646625.png" alt="image-20230222154646625"></p>
+<h5 id="基于Promise封装读文件的方法"><a href="#基于Promise封装读文件的方法" class="headerlink" title="基于Promise封装读文件的方法"></a>基于Promise封装读文件的方法</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> fs <span class="keyword">from</span> <span class="string">&#x27;then-fs&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getFile</span>(<span class="params">fpath</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">res,rej</span>)&#123;</span><br><span class="line">        fs.<span class="title function_">readFile</span>(fpath,<span class="string">&#x27;utf8&#x27;</span>,<span class="function">(<span class="params">err,dataStr</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="title function_">rej</span>(err)</span><br><span class="line">            <span class="title function_">res</span>(dataStr)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">getFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function">(<span class="params">r1</span>)=&gt;</span>&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(r1)&#125;)</span><br><span class="line">.<span class="title function_">catch</span>(<span class="function"><span class="params">err</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err.<span class="property">message</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="async-x2F-await"><a href="#async-x2F-await" class="headerlink" title="async&#x2F;await"></a>async&#x2F;await</h4><h5 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> thenFs <span class="keyword">from</span> <span class="string">&#x27;then-fs&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getFiles</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">const</span> s1=<span class="keyword">await</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(s1);</span><br><span class="line">    <span class="keyword">const</span> s2=<span class="keyword">await</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/2.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(s2);</span><br><span class="line">    <span class="keyword">const</span> s3=<span class="keyword">await</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/3.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(s3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">getFiles</span>()</span><br></pre></td></tr></table></figure>
+
+<p>可以拿到文件中的内容，并且是按文件顺序读取，结果如下：</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230222173236704.png" alt="image-20230222173236704"></p>
+<h5 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h5><ul>
+<li>如果在function中使用了await，则function必须被async修饰</li>
+<li>在async方法中，第一个await之前的代码会同步执行，await之后的代码会异步执行</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> thenFs <span class="keyword">from</span> <span class="string">&#x27;then-fs&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getFiles</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;B&#x27;</span>)</span><br><span class="line">    <span class="keyword">const</span> s1=<span class="keyword">await</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/1.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(s1);</span><br><span class="line">    <span class="keyword">const</span> s2=<span class="keyword">await</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/2.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(s2);</span><br><span class="line">    <span class="keyword">const</span> s3=<span class="keyword">await</span> thenFs.<span class="title function_">readFile</span>(<span class="string">&#x27;./files/3.txt&#x27;</span>,<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(s3);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;D&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">getFiles</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;C&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出结果如下：</p>
+<p><img src="https://typora-au.oss-cn-beijing.aliyuncs.com/image-20230222174227749.png" alt="image-20230222174227749"></p>
+<p>原因：第一个await之后的代码会异步执行，异步执行需要等同步执行完再执行</p>
+<h4 id="EventLoop"><a href="#EventLoop" class="headerlink" title="EventLoop"></a>EventLoop</h4><h5 id="同步任务和异步任务执行过程"><a href="#同步任务和异步任务执行过程" class="headerlink" title="同步任务和异步任务执行过程"></a>同步任务和异步任务执行过程</h5><ul>
+<li>同步任务由JavaScript主线程次序执行</li>
+<li>异步任务委托给宿主环境执行</li>
+<li>已完成的异步任务对应的回调函数会被加入到任务队列中等待执行</li>
+<li>JavaScript主线程的执行栈被清空后，会读取任务队列中的回调函数，次序执行</li>
+<li>JavaScript主线程不断重复上述四个步骤</li>
+</ul>
+<h5 id="宏任务和微任务"><a href="#宏任务和微任务" class="headerlink" title="宏任务和微任务"></a>宏任务和微任务</h5><p>异步任务分为宏任务和微任务</p>
+<p>宏任务：</p>
+<ul>
+<li>异步Ajax请求</li>
+<li>setTimeout、setInterval</li>
+<li>文件操作</li>
+<li>其他宏任务</li>
+</ul>
+<p>微任务</p>
+<ul>
+<li>Promise.then、.catch和.finally</li>
+<li>process.nextTick</li>
+<li>其他微任务</li>
+</ul>
+<p>执行顺序：每一个宏任务执行完之后，会检查是否存在待执行的微任务，如果存在，则执行完所有的微任务再执行下一个宏任务</p>
 
     </div>
 
@@ -418,6 +664,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/02/23/webpack%E5%AD%A6%E4%B9%A0/" rel="next" title="webpack学习">
+                  webpack学习 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
