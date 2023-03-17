@@ -123,7 +123,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,6 +168,186 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/17/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8computed%E4%BC%A0%E5%8F%82%E8%AE%A1%E7%AE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LJX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Au-Au-Au">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Au-Au-Au">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/03/17/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8computed%E4%BC%A0%E5%8F%82%E8%AE%A1%E7%AE%97/" class="post-title-link" itemprop="url">Vue中使用computed传参计算</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-03-17 16:14:38 / Modified: 16:26:39" itemprop="dateCreated datePublished" datetime="2023-03-17T16:14:38+08:00">2023-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%8F%91%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">学习发现</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在处理一个时间格式问题时，想要使用computed属性更改时间的显示格式，但是由于对computed的不熟练，刚开始时是这样写的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">computed</span>:&#123;</span><br><span class="line">        <span class="title function_">dateFormat</span>(<span class="params">dtStr</span>)&#123;</span><br><span class="line">            <span class="keyword">const</span> dt=<span class="keyword">new</span> <span class="title class_">Date</span>(dtStr)</span><br><span class="line">            <span class="keyword">const</span> y=dt.<span class="title function_">getFullYear</span>()</span><br><span class="line">            <span class="keyword">const</span> m=dt.<span class="title function_">getMonth</span>()+<span class="number">1</span></span><br><span class="line">            <span class="keyword">const</span> d=dt.<span class="title function_">getDate</span>()</span><br><span class="line">            <span class="keyword">const</span> hh=dt.<span class="title function_">getHours</span>()</span><br><span class="line">            <span class="keyword">const</span> mm=dt.<span class="title function_">getMinutes</span>()</span><br><span class="line">            <span class="keyword">const</span> ss=dt.<span class="title function_">getSeconds</span>()</span><br><span class="line">            <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;y&#125;</span>-<span class="subst">$&#123;m&#125;</span>-<span class="subst">$&#123;d&#125;</span> <span class="subst">$&#123;hh&#125;</span>:<span class="subst">$&#123;mm&#125;</span>:<span class="subst">$&#123;ss&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后发现报错，这里如果是写methods的话这样写没有任何问题，如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">methods</span>:&#123;</span><br><span class="line">    <span class="title function_">date</span>(<span class="params">dtStr</span>)&#123;</span><br><span class="line">            <span class="keyword">const</span> dt=<span class="keyword">new</span> <span class="title class_">Date</span>(dtStr)</span><br><span class="line">            <span class="keyword">const</span> y=dt.<span class="title function_">getFullYear</span>()</span><br><span class="line">            <span class="keyword">const</span> m=dt.<span class="title function_">getMonth</span>()+<span class="number">1</span></span><br><span class="line">            <span class="keyword">const</span> d=dt.<span class="title function_">getDate</span>()</span><br><span class="line">            <span class="keyword">const</span> hh=dt.<span class="title function_">getHours</span>()</span><br><span class="line">            <span class="keyword">const</span> mm=dt.<span class="title function_">getMinutes</span>()</span><br><span class="line">            <span class="keyword">const</span> ss=dt.<span class="title function_">getSeconds</span>()</span><br><span class="line">            <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;y&#125;</span>-<span class="subst">$&#123;m&#125;</span>-<span class="subst">$&#123;d&#125;</span> <span class="subst">$&#123;hh&#125;</span>:<span class="subst">$&#123;mm&#125;</span>:<span class="subst">$&#123;ss&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是computed传参不能这么写，它是一个属性，不是方法，不能直接在属性内传参，但是也有对应的解决方法，就是在里面返回一个能传参数的函数，写法如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">computed</span>:&#123;</span><br><span class="line">        <span class="title function_">dateFormat</span>(<span class="params"></span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">dtStr</span>)&#123;</span><br><span class="line">                <span class="keyword">const</span> dt=<span class="keyword">new</span> <span class="title class_">Date</span>(dtStr)</span><br><span class="line">                <span class="keyword">const</span> y=dt.<span class="title function_">getFullYear</span>()</span><br><span class="line">                <span class="keyword">const</span> m=dt.<span class="title function_">getMonth</span>()+<span class="number">1</span></span><br><span class="line">                <span class="keyword">const</span> d=dt.<span class="title function_">getDate</span>()</span><br><span class="line">                <span class="keyword">const</span> hh=dt.<span class="title function_">getHours</span>()</span><br><span class="line">                <span class="keyword">const</span> mm=dt.<span class="title function_">getMinutes</span>()</span><br><span class="line">                <span class="keyword">const</span> ss=dt.<span class="title function_">getSeconds</span>()</span><br><span class="line">                <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;y&#125;</span>-<span class="subst">$&#123;m&#125;</span>-<span class="subst">$&#123;d&#125;</span> <span class="subst">$&#123;hh&#125;</span>:<span class="subst">$&#123;mm&#125;</span>:<span class="subst">$&#123;ss&#125;</span>`</span></span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>相对于methods来说，computed会缓存计算的结果，只有计算属性的依赖项发生变化时才会重新进行运算，因此计算属性的性能更好</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/01/Vue3%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LJX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Au-Au-Au">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Au-Au-Au">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/03/01/Vue3%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Vue3学习</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-03-01 11:02:44" itemprop="dateCreated datePublished" datetime="2023-03-01T11:02:44+08:00">2023-03-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-03-14 18:40:47" itemprop="dateModified" datetime="2023-03-14T18:40:47+08:00">2023-03-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="vite基本使用"><a href="#vite基本使用" class="headerlink" title="vite基本使用"></a>vite基本使用</h3><h4 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h4><p>在cmd中输入命令：<code>npm create vite@latest</code></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/01/Vue3%E5%AD%A6%E4%B9%A0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -397,7 +577,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-02-23 10:29:19" itemprop="dateModified" datetime="2023-02-23T10:29:19+08:00">2023-02-23</time>
+      <time title="Modified: 2023-03-15 11:26:24" itemprop="dateModified" datetime="2023-03-15T11:26:24+08:00">2023-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -493,7 +673,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-28 10:38:22" itemprop="dateModified" datetime="2023-01-28T10:38:22+08:00">2023-01-28</time>
+      <time title="Modified: 2023-03-13 16:11:02" itemprop="dateModified" datetime="2023-03-13T16:11:02+08:00">2023-03-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
