@@ -123,18 +123,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -168,6 +168,103 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/22/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LJX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Au-Au-Au">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Au-Au-Au">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/03/22/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">基础算法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-03-22 11:11:22 / Modified: 15:31:57" itemprop="dateCreated datePublished" datetime="2023-03-22T11:11:22+08:00">2023-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>进行基础算法的练习，包括对数据结构的复习和掌握，大约有二三百道题，题目难度从易到难，但大部分比较基础，希望能够坚持学习，克服困难</p>
+<p>每道题都会尽量写出解题的思路，有一个思考的过程</p>
+<!---more-->
+
+<h3 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h3><h4 id="删除最外层的括号"><a href="#删除最外层的括号" class="headerlink" title="删除最外层的括号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-outermost-parentheses/">删除最外层的括号</a></h4><ul>
+<li>方法1</li>
+</ul>
+<p>思路：计数器的方法，遇到左括号-1，右括号+1，可以设想，如果不出现例如<code>（（ </code>或者 <code>））</code> 的情况时，只有单纯的 <code>（）</code> 这种类型，那么计数器从0开始，也一定是以0结束，意思是只要左括号计数大于1的和右括号大于0的，就是添加到最终输出字符中的括号</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> removeOuterParentheses = <span class="keyword">function</span>(<span class="params">S</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> num=<span class="number">0</span></span><br><span class="line">    <span class="keyword">let</span> res=<span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;S.<span class="property">length</span>;i++)&#123;</span><br><span class="line">      <span class="keyword">if</span>(S[i]===<span class="string">&#x27;(&#x27;</span>&amp;&amp;++num&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        res+=S[i]</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(S[i]===<span class="string">&#x27;)&#x27;</span>&amp;&amp;--num&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        res+=S[i]</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方法2</li>
+</ul>
+<p>思路：借助栈实现，看代码就能够清晰看懂思路</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> removeOuterParentheses = <span class="keyword">function</span>(<span class="params">S</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> res=<span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">let</span> stack=[]</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> S)&#123;</span><br><span class="line">      <span class="keyword">if</span>(item===<span class="string">&#x27;(&#x27;</span>)&#123;</span><br><span class="line">        stack.<span class="title function_">push</span>(item)</span><br><span class="line">        <span class="keyword">if</span>(stack.<span class="property">length</span>&gt;<span class="number">1</span>)&#123;</span><br><span class="line">          res+=item</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span>&#123;</span><br><span class="line">        stack.<span class="title function_">pop</span>()</span><br><span class="line">        <span class="keyword">if</span>(stack.<span class="property">length</span>&gt;<span class="number">0</span>)&#123;</span><br><span class="line">          res+=item</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除字符串中的所有相邻重复项"><a href="#删除字符串中的所有相邻重复项" class="headerlink" title="删除字符串中的所有相邻重复项"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/">删除字符串中的所有相邻重复项</a></h4><p>思路：这个题比较简单，只需要判断元素是否与栈顶元素相同，相同则栈顶元素出栈，最后将栈return</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> removeDuplicates = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> stack=[]</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> s)&#123;</span><br><span class="line">        <span class="keyword">if</span>(stack[stack.<span class="property">length</span>-<span class="number">1</span>]===item&amp;&amp;stack.<span class="property">length</span>!==<span class="number">0</span>)&#123;</span><br><span class="line">            stack.<span class="title function_">pop</span>()</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            stack.<span class="title function_">push</span>(item)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> stack.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
