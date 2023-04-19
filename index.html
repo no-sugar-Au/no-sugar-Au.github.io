@@ -205,9 +205,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-04-18 15:13:08 / Modified: 15:21:20" itemprop="dateCreated datePublished" datetime="2023-04-18T15:13:08+08:00">2023-04-18</time>
+      <time title="Created: 2023-04-18 15:13:08" itemprop="dateCreated datePublished" datetime="2023-04-18T15:13:08+08:00">2023-04-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-19 10:41:37" itemprop="dateModified" datetime="2023-04-19T10:41:37+08:00">2023-04-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -235,17 +241,14 @@
 <li>postcss-pxtorem：将px转化为rem</li>
 <li>amfe-flexible：将1rem设置为viewWidth&#x2F;10</li>
 </ul>
-<h3 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h3><ul>
-<li>在 <code>vite.config.js</code> 中</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> vue <span class="keyword">from</span> <span class="string">&#x27;@vitejs/plugin-vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> postCssPxToRem <span class="keyword">from</span> <span class="string">&quot;postcss-pxtorem&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// https://vitejs.dev/config/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">vue</span>()],</span><br><span class="line">  <span class="attr">css</span>:&#123;</span><br><span class="line">    <span class="comment">// 配置 CSS modules 的行为。选项将被传递给 postcss-modules</span></span><br><span class="line">    <span class="attr">modules</span>: &#123;&#125;,</span><br><span class="line">    <span class="comment">// 内联的 PostCSS 配置（格式同 postcss.config.js）</span></span><br><span class="line">    <span class="attr">postcss</span>: &#123;</span><br><span class="line">      <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="title function_">postCssPxToRem</span>(&#123;</span><br><span class="line">          <span class="attr">rootValue</span>: <span class="number">37.5</span>, <span class="comment">// 1rem 的大小</span></span><br><span class="line">          <span class="attr">propList</span>: [<span class="string">&#x27;*&#x27;</span>], <span class="comment">// 需要转换的属性，*(全部转换)</span></span><br><span class="line">          <span class="attr">unitPrecision</span>: <span class="number">6</span> <span class="comment">// 转换精度，保留的小数位数</span></span><br><span class="line">        &#125;)</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在 <code>main.js</code> 中</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;amfe-flexible&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/18/vue3+vite%E4%BD%BF%E7%94%A8rem%E5%B8%83%E5%B1%80%E5%A6%82%E4%BD%95%E5%BC%95%E5%85%A5/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
